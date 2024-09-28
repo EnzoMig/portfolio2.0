@@ -12,7 +12,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    cursor: none; 
+    /* cursor: none;  */
     text-decoration: none;
 }
 
@@ -21,7 +21,7 @@
     color: var(--background_color);
     opacity: .8;
     line-height: 1;
-  }
+}
 
   body {
     font-family: 'DM Sans', sans-serif;
@@ -115,18 +115,7 @@ header ul a {
 
 /* Project Cards */
 
-.project-card {
-    max-width: 500px;
-    width: 450px;
-    min-height: 500px;
-    border: 2px solid var(--main_color);
-    border-radius: 8px;
-    display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
-    background-color: var(--background_color);
 
-}
 
 .title{
     font-size: 32px;
@@ -136,14 +125,7 @@ header ul a {
     font-size: 18px;
 }
 
-.project-text {
-    padding: 25px;
-    border-top: 2px solid var(--main_color);
-    color: var(--main_color);
-    background-color: var(--background_color);
-    /* border-radius: 8px; */
-    
-}
+
 
 .project-card .intro{
     font-size: 18px;
@@ -538,3 +520,67 @@ iframe {
 .title-spacer   {
     height: 25px;
 }
+
+.project-gallery {
+    display: flex;
+    gap: 20px;
+    max-width: var(--container-width);
+    /* column-width: 250px; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 700px;
+    min-width: 200px
+    /* width: 100%; */
+    /* margin: 0 auto; */
+}
+
+.project-img img {
+    width: 100%;
+    /* height: 100%; */
+
+    object-fit: cover;
+}
+
+.project-img {
+    position: relative;
+    /* border: 5px solid black; */
+}
+
+
+
+.project-text {
+    padding: 25px;
+    border-top: 2px solid var(--background_color);
+    color: var(--background_color);
+    background-color: rgba(0,0,0,.85);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.project-img:hover {
+    /* background-color: var(--main_color); */
+    transform: translate(5px, -5px);
+    transition: 0.3s;
+}
+
+.project-text:hover {
+    opacity: 1;
+    transition: .5s;
+}
+
+.project-img .intro{
+    font-size: 18px;
+    padding: 1rem 0;
+}
+
+
+
